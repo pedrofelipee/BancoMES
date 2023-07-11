@@ -1,5 +1,5 @@
-# BancoMES
-Projeto na tentativa de resgatar dados do banco de dados, obtidos via MES. Para realizar tratativa e apresentar dados de Manutenção.
+## BancoMES
 
+# Projeto de **estudos** para integrar SQL Server com python.
 
-Correções
+Projeto visa apresentar um dashboard para empresa Duraplast, se utilizando do banco de dados do MES. Sistema que extrai dados de máquinas para identificar o seu funcionamento.

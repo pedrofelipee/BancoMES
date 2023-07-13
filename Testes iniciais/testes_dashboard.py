@@ -1,21 +1,31 @@
 import streamlit as st
-
-
-#Textos 
-st.header("Minha dashboard")
-
 import pandas as pd
 import numpy as np
 
+#Textos 
+st.markdown("<h1 style='text-align: center;font-size:30px ;color: white;'>Dashboard Manutentção - Duraplast</h1>", unsafe_allow_html=True)
 
-if st.button('MEU BOTÃO'):
-    df = pd.DataFrame(
-        np.random.randn(10, 3),
-        columns=['Preço', 'Taxa de desocupação', 'Taxa inadiplencia',])
 
-    st.bar_chart(df)
+r1col1, r1col2, r1col3, r1col4 = st.columns(4)
 
-check = st.checkbox('Aceito')
+with r1col1:
+   st.metric(label="Quantidade de paradas", value="70 °F", delta="1.2 °F")
 
-if check:
-     st.write('Marcado')
+with r1col2:
+   st.metric(label="Nº de maquinas quebradas", value="70 °F", delta="1.2 °F")
+
+with r1col3:
+   st.metric(label="Disponibilidade", value="70 °F", delta="1.2 °F")
+
+with r1col4:
+   st.metric(label="Confiabilidade", value="70 °F", delta="1.2 °F")
+
+
+options = st.multiselect(
+     'Cor favorita',
+     ['Verde', 'Amarelo', 'Vermelho', 'Azul'],
+     ['x', 'Verde'])
+
+
+st.write('Você selecionou:', options)
+
